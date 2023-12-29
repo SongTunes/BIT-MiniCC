@@ -1,0 +1,287 @@
+{
+    "type": "Program",
+    "items": [
+        {
+            "type": "FunctionDefine",
+            "specifiers": [
+                {
+                    "type": "Token",
+                    "value": "int",
+                    "tokenId": 0
+                }
+            ],
+            "declarator": {
+                "type": "FunctionDeclarator",
+                "declarator": {
+                    "type": "VariableDeclarator",
+                    "identifier": {
+                        "type": "Identifier",
+                        "value": "sum",
+                        "tokenId": 1
+                    }
+                },
+                "params": [
+                    {
+                        "type": "ParamsDeclarator",
+                        "specfiers": [
+                            {
+                                "type": "Token",
+                                "value": "int",
+                                "tokenId": 3
+                            }
+                        ],
+                        "declarator": {
+                            "type": "VariableDeclarator",
+                            "identifier": {
+                                "type": "Identifier",
+                                "value": "a",
+                                "tokenId": 4
+                            }
+                        }
+                    },
+                    {
+                        "type": "ParamsDeclarator",
+                        "specfiers": [
+                            {
+                                "type": "Token",
+                                "value": "int",
+                                "tokenId": 6
+                            }
+                        ],
+                        "declarator": {
+                            "type": "VariableDeclarator",
+                            "identifier": {
+                                "type": "Identifier",
+                                "value": "b",
+                                "tokenId": 7
+                            }
+                        }
+                    }
+                ]
+            },
+            "body": {
+                "type": "CompoundStatement",
+                "blockItems": [
+                    {
+                        "type": "Declaration",
+                        "specifiers": [
+                            {
+                                "type": "Token",
+                                "value": "int",
+                                "tokenId": 10
+                            }
+                        ],
+                        "initLists": [
+                            {
+                                "type": "InitList",
+                                "declarator": {
+                                    "type": "VariableDeclarator",
+                                    "identifier": {
+                                        "type": "Identifier",
+                                        "value": "a",
+                                        "tokenId": 11
+                                    }
+                                },
+                                "exprs": [
+                                    {
+                                        "type": "IntegerConstant",
+                                        "value": 1,
+                                        "tokenId": 13
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "type": "ExpressionStatement",
+                        "exprs": [
+                            {
+                                "type": "BinaryExpression",
+                                "op": {
+                                    "type": "Token",
+                                    "value": "=",
+                                    "tokenId": 16
+                                },
+                                "expr1": {
+                                    "type": "Identifier",
+                                    "value": "a",
+                                    "tokenId": 15
+                                },
+                                "expr2": {
+                                    "type": "IntegerConstant",
+                                    "value": 0,
+                                    "tokenId": 17
+                                }
+                            }
+                        ]
+                    },
+                    {
+                        "type": "IterationStatement",
+                        "init": [
+                            {
+                                "type": "BinaryExpression",
+                                "op": {
+                                    "type": "Token",
+                                    "value": "=",
+                                    "tokenId": 22
+                                },
+                                "expr1": {
+                                    "type": "Identifier",
+                                    "value": "a",
+                                    "tokenId": 21
+                                },
+                                "expr2": {
+                                    "type": "IntegerConstant",
+                                    "value": 0,
+                                    "tokenId": 23
+                                }
+                            }
+                        ],
+                        "cond": [
+                            {
+                                "type": "BinaryExpression",
+                                "op": {
+                                    "type": "Token",
+                                    "value": "<=",
+                                    "tokenId": 26
+                                },
+                                "expr1": {
+                                    "type": "Identifier",
+                                    "value": "a",
+                                    "tokenId": 25
+                                },
+                                "expr2": {
+                                    "type": "IntegerConstant",
+                                    "value": 10,
+                                    "tokenId": 27
+                                }
+                            }
+                        ],
+                        "step": [
+                            {
+                                "type": "PostfixExpression",
+                                "expr": {
+                                    "type": "Identifier",
+                                    "value": "a",
+                                    "tokenId": 29
+                                },
+                                "op": {
+                                    "type": "Token",
+                                    "value": "++",
+                                    "tokenId": 30
+                                }
+                            }
+                        ],
+                        "stat": {
+                            "type": "CompoundStatement",
+                            "blockItems": [
+                                {
+                                    "type": "SelectionStatement",
+                                    "cond": [
+                                        {
+                                            "type": "BinaryExpression",
+                                            "op": {
+                                                "type": "Token",
+                                                "value": "<",
+                                                "tokenId": 36
+                                            },
+                                            "expr1": {
+                                                "type": "Identifier",
+                                                "value": "a",
+                                                "tokenId": 35
+                                            },
+                                            "expr2": {
+                                                "type": "Identifier",
+                                                "value": "b",
+                                                "tokenId": 37
+                                            }
+                                        }
+                                    ],
+                                    "then": {
+                                        "type": "CompoundStatement",
+                                        "blockItems": [
+                                            {
+                                                "type": "ExpressionStatement",
+                                                "exprs": [
+                                                    {
+                                                        "type": "PostfixExpression",
+                                                        "expr": {
+                                                            "type": "Identifier",
+                                                            "value": "a",
+                                                            "tokenId": 40
+                                                        },
+                                                        "op": {
+                                                            "type": "Token",
+                                                            "value": "++",
+                                                            "tokenId": 41
+                                                        }
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "type": "ExpressionStatement",
+                                                "exprs": null
+                                            },
+                                            {
+                                                "type": "ContinueStatement"
+                                            }
+                                        ]
+                                    },
+                                    "otherwise": {
+                                        "type": "CompoundStatement",
+                                        "blockItems": [
+                                            {
+                                                "type": "ExpressionStatement",
+                                                "exprs": [
+                                                    {
+                                                        "type": "PostfixExpression",
+                                                        "expr": {
+                                                            "type": "Identifier",
+                                                            "value": "b",
+                                                            "tokenId": 49
+                                                        },
+                                                        "op": {
+                                                            "type": "Token",
+                                                            "value": "++",
+                                                            "tokenId": 50
+                                                        }
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "type": "BreakStatement"
+                                            }
+                                        ]
+                                    }
+                                }
+                            ]
+                        }
+                    },
+                    {
+                        "type": "ReturnStatement",
+                        "expr": [
+                            {
+                                "type": "BinaryExpression",
+                                "op": {
+                                    "type": "Token",
+                                    "value": "+",
+                                    "tokenId": 58
+                                },
+                                "expr1": {
+                                    "type": "Identifier",
+                                    "value": "a",
+                                    "tokenId": 57
+                                },
+                                "expr2": {
+                                    "type": "Identifier",
+                                    "value": "b",
+                                    "tokenId": 59
+                                }
+                            }
+                        ]
+                    }
+                ]
+            }
+        }
+    ]
+}

@@ -1,0 +1,32 @@
+func &main() i32{
+var %a i32
+dassign %2(constval i32 0)
+dassign %a(regread i32 %2)
+@1LoopCheckLabel:
+dassign %3(constval i32 10)
+dassign %4(
+	lt i32(dread i32 %a,regread i32 %3))
+dassign %5(regread i32 %4)
+brfalse <@1LoopEndLabel>(regread i32 %5)
+dassign %6(constval i32 2)
+dassign %a(regread i32 %6)
+@1LoopStepLabel:
+dassign %7(dread i32 %a)
+dassign %8(constval i32 1)
+dassign %a(
+	add i32(dread i32 %a,regread i32 %8))
+goto <@1LoopCheckLabel>
+@1LoopEndLabel:
+dassign %9(constval i32 0)
+dassign %a(regread i32 %9)
+brfalse <@1otherwise1>(dread i32 %a)
+dassign %10(constval i32 3)
+dassign %a(regread i32 %10)
+goto <@1endif>
+@1otherwise1:
+dassign %11(constval i32 4)
+dassign %a(regread i32 %11)
+@1endif:
+dassign %12(constval i32 0)
+return (regread i32 %12)}
+

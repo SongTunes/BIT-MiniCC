@@ -1,4 +1,4 @@
-//打印杨辉三角
+
 void YangHuiTriangle()
 {
 	int i,j,triangle[8][8];

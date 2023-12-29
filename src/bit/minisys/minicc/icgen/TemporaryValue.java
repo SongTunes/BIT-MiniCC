@@ -3,23 +3,30 @@ package bit.minisys.minicc.icgen;
 import bit.minisys.minicc.parser.ast.ASTNode;
 import bit.minisys.minicc.parser.ast.ASTVisitor;
 
-// ÁÙÊ±±äÁ¿
-public class TemporaryValue extends ASTNode{
+// ï¿½ï¿½Ê±ï¿½ï¿½ï¿½ï¿½
+public class TemporaryValue extends ASTNode {
 
 	private Integer id;
 
 	public String name() {
-		return "%"+id;
+		return "%" + id;
 	}
+
 	@Override
 	public void accept(ASTVisitor visitor) throws Exception {
 
 	}
+
 	public TemporaryValue(Integer id) {
 		super("TemporaryValue");
 		this.id = id;
 	}
+
 	public TemporaryValue(String type) {
 		super(type);
+	}
+
+	public Integer getId() {
+		return id;
 	}
 }
